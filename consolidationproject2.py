@@ -22,20 +22,32 @@ def welcome():
     print('So use them wisely!! :3 ')
 
 # Global money variable
-money = 0
+money = 100
 
 #first question!
 def question_one():
     global money
     while True:
         try:
-            ans = input(' Q1: Would you rather pay $50 for a long hair cat (1) or $10 for a short haired (2) ? Type 1 or 2 to pick: ')
+            ans = input(' Q1: Would you rather pay $50 for a long hair cat (1) or $30 for a short haired (2) ? Type 1 or 2 to pick: ')
             if ans.lower() not in ('1', '2'):
                 raise ValueError(f"Please enter '1' or '2'. ")
             break
         except ValueError as e:
             print(e)
 
+#Deduction the money from the initial $100 based on the user response
+    if ans.lower() == '1':
+        print(f"Now you have a beautiful fluffy cat!")
+        print(' ')
+        money -= 50  # decreases fund by 50
+    elif ans.lower() == '2':
+        print(f"You now have a beautiful short haired cat!")
+        print(' ')
+        money -= 30  # increases the score for making an ethical choice
+
+
 welcome()
 question_one()
-
+print(' ')
+print('You have', money,'dollars left in the bank')
