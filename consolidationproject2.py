@@ -192,3 +192,30 @@ question_four_randomizer()
 time.sleep(2) # Waits for 2 seconds 
 finalscreen() #Displays credits and thank you message
 
+#----------------------------------------------------------------
+#TEST CASES
+
+#def test_question_one_long_hair():
+#    global money
+#    money = 100  # Reset money to initial value before the test
+#    user_input = '1'  # Simulating user choosing the long hair cat which costs $50
+#    question_one()  # Function to be tested
+#   assert money == 50, "Test Failed: Money should be 50 after choosing long hair cat."
+#    print("Test Passed: Correct amount deducted for long hair cat.")
+
+#def test_question_one_short_hair():
+#    global money
+#    money = 100  # Reset money to initial value before the test
+#   user_input = '2'  # Simulating user choosing the short hair cat which costs $30
+#    question_one()  # Function to be tested
+#    assert money == 70, "Test Failed: Money should be 70 after choosing short hair cat."
+#    print("Test Passed: Correct amount deducted for short hair cat.")
+
+#def test_question_two_brown_eyes():
+#    global money
+#    money = 100  # Reset money to initial value before the test
+#    user_input = '1'  # Simulating user choosing brown eyes which cost $20
+#    question_two()  # Function to be tested
+#    assert money == 80, "Test Failed: Money should be 80 after choosing brown eyes."
+#    print("Test Passed: Correct amount deducted for brown eyes.")
+
