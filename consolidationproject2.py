@@ -13,6 +13,9 @@ gametwo.display_rules()
 
 #welcome the user and lay out some more rules
 def welcome():
+    """
+    This function displays the welcome message to the user and introduces the game and the $100 budget constraint.
+    """
     print('Welcome to the build your cat simulator ' + user_name + '!')
     print('Keep in mind you only have $100 to customize your cat!')
     print('So use them wisely!! :3 ')
@@ -25,6 +28,10 @@ money = 100
 #first question that requires user input
 #asks user their preference on cat hair length
 def question_one():
+    """
+    This makes the user to choose between a long-haired cat for $50 or a short-haired cat for $30.
+    Then deducts the chosen amount from the global 'money' variable.
+    """
     global money
     while True:
         try:
@@ -46,6 +53,11 @@ def question_one():
         money -= 30   # decreases fund by 30
 
 def question_two():
+    """
+    This function asks the user to choose between brown eyes for $20 or green eyes for $40 for their cat.
+    This one then asks the user to confirm their choice before deducting the amount from the global 'money' variable.
+    If the user keeps answering "yes" when they want to chnage their mind the question will keep looping until user inputs "no".
+    """
     global money
     for i in range(1):  
         while True:
@@ -80,6 +92,10 @@ def question_two():
             money -= 40 # decreases fund by 10
 
 def question_three():
+    """
+    Question 3 makes the user to choose the sex of the cat for a fixed price of $10.
+    Either way it deducts $10 from the global 'money' variable based on the user's choice.
+    """
     global money
     while True:
         try:
@@ -102,6 +118,10 @@ def question_three():
 
 #Question 4 about a randomized second cat 
 def question_four_randomizer():
+    """
+    The last question in the game offers the user a chance to adopt a second cat from a randomized selection.
+    The 'my_cat' global variable updates if the user decides to adopt.
+    """
     global my_cat
     global money
 
@@ -134,6 +154,9 @@ def question_four_randomizer():
 
 #Displays credits and thank you message
 def finalscreen():
+    """
+    Finally, this function displays the final screen with a thank you message and rolls the credits after a brief pause.
+    """
     print('Hello, user :) This concludes the game. Thank you for playing!')
     time.sleep(2)
    
@@ -168,3 +191,4 @@ print('Its your lucky day we are having a buy one get one free sale, in addtion 
 question_four_randomizer()
 time.sleep(2) # Waits for 2 seconds 
 finalscreen() #Displays credits and thank you message
+
