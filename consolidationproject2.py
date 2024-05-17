@@ -1,5 +1,7 @@
 #Game: Build a Kitty Cat Simulator
 
+# Serena: Don't forget the license.txt file!
+
 #Import all the modules 
 import time
 import random
