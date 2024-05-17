@@ -14,7 +14,7 @@ gametwo.display_rules()
 #welcome the user and lay out some more rules
 def welcome():
     """
-    This function displays the welcome message to the user and introduces the game and the $100 budget constraint.
+    This function displays the welcome message to the user and introduces the game and tells the user about their  $100 budget constraint.
     """
     print('Welcome to the build your cat simulator ' + user_name + '!')
     print('Keep in mind you only have $100 to customize your cat!')
@@ -22,7 +22,7 @@ def welcome():
     print('----------------------------')
     print(' ')
 
-# Global money variable
+# Global money variable!
 money = 100
 
 #first question that requires user input
@@ -35,8 +35,8 @@ def question_one():
     global money
     while True:
         try:
-            ans = input(' Q1: Would you rather pay $50 for a long hair cat (1) or $30 for a short haired (2) ? Type 1 or 2 to pick: ')
-            if ans.lower() not in ('1', '2'):
+            ans = input(' Q1: Would you rather pay $50 for a long hair cat (1) or $30 for a short haired (2) ? Type 1 or 2 to pick: ') #first question asked to user
+            if ans.lower() not in ('1', '2'): #Chech if answer is 1/2
                 raise ValueError(f"Please enter '1' or '2'. ") #redirect user to input either 1 or 2
             break
         except ValueError as e:
@@ -44,11 +44,11 @@ def question_one():
 
 #Deducts money from the initial $100 based on the user response
     if ans.lower() == '1':
-        print(f"Now you have a beautiful fluffy cat!")
+        print(f"Now you have a beautiful fluffy cat!") #helpful messages to solidify and remind the user of their choice
         print(' ')
         money -= 50  # decreases fund by 50
     elif ans.lower() == '2':
-        print(f"You now have a beautiful short haired cat!")
+        print(f"You now have a beautiful short haired cat!")  #helpful messages to solidify and remind the user of their choice
         print(' ')
         money -= 30   # decreases fund by 30
 
