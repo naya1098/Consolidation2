@@ -81,13 +81,15 @@ def question_two():
                 print(e)
             print(' ')
 #calculating the user response
-
+        # Serena: The user's choice isn't being used to determine the eye color of the cat, you could add a print statement to inform the user of their choice
         if ans.lower() == '1':
-            print("You have spent $20!") 
+            print("You have spent $20!")
+            #print("Your cat now has beautiful brown eyes!")
             print(' ')
             money -= 20 # decreases fund by 20
         elif ans.lower() == '2':
-            print("Yo uhave spent $40!")
+            print("You have spent $40!")
+            #print("Your cat now has stunning green eyes!")
             print(' ')
             money -= 40 # decreases fund by 10
 
@@ -141,6 +143,8 @@ def question_four_randomizer():
             print(' ')
             if ans.lower() not in ('y', 'n'):
                 raise ValueError("Please enter 'y' or 'n'. ") #redirect user to input either y or n
+            # Serena: What is the purpose of the 'my_cat' global variable here? It is being updated with the breed and personality
+            # of the second cat, but it's not being used anywhere else in the code except in this function
             if ans.lower() == 'y':
                 my_cat = {'breed': breed, 'personality': personality}
                 print("Congratulations on your new cats!")
